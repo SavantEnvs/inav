@@ -1,0 +1,9 @@
+project: savantenvs/inav
+target: fuzz_dronecan_msp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_dronecan_msp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_dronecan_msp
+    libfuzzer: true
+    timeout: 10
